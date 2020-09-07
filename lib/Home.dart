@@ -103,11 +103,6 @@ class _HomePageState extends State<HomePage> {
                   title: Text('Monday'),
                   subtitle: Text('sunny, h: 80, l: 65'),
                 ),
-                ListTile(
-                  leading: Icon(Icons.wb_sunny),
-                  title: Text('Monday'),
-                  subtitle: Text('sunny, h: 80, l: 65'),
-                ),
               ],
             ),
           )
