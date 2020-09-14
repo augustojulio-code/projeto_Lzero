@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'cadastro.dart';
 
 int _valor = 0;
 
@@ -59,8 +60,12 @@ class _HomePageState extends State<HomePage> {
               [
                 ListTile(
                   leading: Icon(Icons.wb_sunny),
-                  title: Text("Lista item 1"),
-                  subtitle: Text("Numero 1"),
+                  title: Text("Next Page"),
+                  subtitle: Text("on Click"),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Cadastro()));
+                  },
                 ),
                 ListTile(
                   leading: Icon(Icons.plus_one),
