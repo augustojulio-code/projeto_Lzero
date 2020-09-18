@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'cadastro.dart';
+import 'pagina2rank.dart';
 
 int _valor = 0;
 
@@ -24,7 +25,9 @@ class _HomePageState extends State<HomePage> {
         physics: const BouncingScrollPhysics(),
         slivers: <Widget>[
           SliverAppBar(
+            floating: true,
             stretch: true,
+            backgroundColor: Color.fromARGB(0xff, 0xff, 0xff, 0xff),
             onStretchTrigger: () {
               return;
             },
@@ -41,18 +44,17 @@ class _HomePageState extends State<HomePage> {
                   const DecoratedBox(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        begin: Alignment(0.0, 0.5),
-                        end: Alignment(0.0, 0.0),
+                        //begin: Alignment(0.0, 0.5),
+                        //end: Alignment(0.0, 0.0),
                         colors: <Color>[
-                          Color(0x60001000),
-                          Color(0x00000000),
+                          Color(0xFFFFFFFF),
+                          Color(0xFFFFFFFF),
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-              //backgroundColor: Colors.blueAccent,
             ),
           ),
           SliverList(
@@ -61,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                 ListTile(
                   leading: Icon(Icons.wb_sunny),
                   title: Text("Next Page"),
-                  subtitle: Text("on Click"),
+                  subtitle: Text("On Click"),
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Cadastro()));
@@ -77,6 +79,22 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   subtitle: Text("$_valor"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.wb_sunny),
+                  title: Text('Page 2'),
+                  subtitle: Text('On Click'),
+                  onTap: () {
+                    setState(() {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => PageRank()));
+                    });
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.wb_sunny),
+                  title: Text('Monday'),
+                  subtitle: Text('sunny, h: 80, l: 65'),
                 ),
                 ListTile(
                   leading: Icon(Icons.wb_sunny),
